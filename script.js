@@ -109,12 +109,14 @@ const projects = [
         image: 'images/photo.jpg',
         tags: ['web', 'html', 'css', 'javascript', 'portfolio'],
         type: 'web',
+        repo: 'https://github.com/Abhiboss07/Portfolio',
         details: `<ul>
 <li><b>Designed and developed a personal portfolio website</b> using HTML5, CSS3, and JavaScript to highlight my work and skills.</li>
 <li><b>Implemented responsive design</b> for seamless viewing across devices and screen sizes.</li>
 <li><b>Showcased major projects</b> with interactive cards and modal popups for detailed views.</li>
 <li><b>Integrated downloadable resume</b> and contact form for professional outreach.</li>
 <li><b>Optimized for performance and accessibility</b> to ensure a fast and user-friendly experience.</li>
+<li><b>Live Demo:</b> <a href='https://portfolio-abhishek-01.vercel.app/' target='_blank'>portfolio-abhishek-01.vercel.app</a></li>
 </ul>`
     }
 ];
