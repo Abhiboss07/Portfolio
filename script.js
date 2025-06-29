@@ -201,18 +201,17 @@ if (contactForm) {
         
         // Get form values
         const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
         const subject = document.getElementById('subject').value;
         const message = document.getElementById('message').value;
         
         // Validate form
-        if (!name || !email || !subject || !message) {
+        if (!name || !subject || !message) {
             alert('Please fill in all fields');
             return;
         }
         
         // Create mailto link with form data
-        const mailtoLink = `mailto:abhicps19@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+        const mailtoLink = `mailto:abhicps19@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\n\nMessage:\n${message}`)}`;
         
         // Open default email client
         window.location.href = mailtoLink;
