@@ -72,51 +72,50 @@ backToTop.addEventListener('click', () => {
 const projects = [
     {
         title: 'NativeCode - Hindi Code Playground',
-        description: 'A toy programming language with Hindi syntax, transpiling to Python, featuring an interactive web playground for real-time code execution.',
+        description: 'Designed and deployed a Hindi-syntax programming language and real-time coding platform, featuring a custom Python transpiler, secure control flow, and an interactive playground built with React, FastAPI, WebSockets, and CodeMirror 6.',
         image: 'images/nativecode-logo.png',
         tags: ['web', 'react', 'fastapi', 'CodeMirror', 'hindi', 'vercel', 'python'],
         type: 'web',
         repo: 'https://github.com/Abhiboss07/NativeCode',
         details: `<ul>
-<li><b>Hindi Syntax:</b> Enables programming in Hindi-like syntax, making coding accessible for Hindi-speaking learners.</li>
-<li><b>Python-Based Transpiler:</b> Converts Hindi code to Python for execution, leveraging Python's robustness.</li>
-<li><b>Interactive Playground:</b> Real-time web-based environment for writing and testing NativeCode directly in the browser.</li>
-<li><b>Modern Stack:</b> Built with React (frontend), FastAPI (backend), and Vercel for deployment.</li>
-<li><b>Features:</b> Variable declaration, control structures, loops, string interpolation, and more, all in Hindi syntax.</li>
+<li><b>Created a Hindi-syntax programming language</b> with a custom transpiler to Python, supporting string interpolation, control flow, and safety features.</li>
+<li><b>Developed a full-stack web playground</b> with React, FastAPI, and WebSockets for real-time code execution and transpiled output display.</li>
+<li><b>Integrated CodeMirror 6 editor</b> with custom Hindi syntax highlighting, smart auto-completion, and built-in code examples.</li>
+<li><b>Deployed scalable production app</b> on Vercel and Render with responsive UI, optimized performance, and robust error handling.</li>
+<li><b>Designed an accessible coding platform</b> enabling Hindi-speaking users to learn programming concepts through natural-language coding.</li>
 <li><b>Open Source:</b> <a href='https://github.com/Abhiboss07/NativeCode' target='_blank'>View on GitHub</a></li>
 <li><b>Live Demo:</b> <a href='https://native-code.vercel.app/' target='_blank'>native-code.vercel.app</a></li>
 </ul>`
     },
     {
-        title: 'Java Login System Project Summary',
-        description: 'A simple command-line login system in Java with user registration, login, and in-memory data management.',
+        title: 'Java Login System',
+        description: 'Developed a Java-based command-line authentication system using OOP principles, HashMap for in-memory storage, and modular architecture separating data models, business logic, and CLI layers.',
         image: 'images/Java-LoginSystem.png',
         tags: ['java', 'cli', 'oop', 'hashmap', 'authentication'],
         type: 'web',
         repo: 'https://github.com/Abhiboss07/LoginSystem',
         details: `<ul>
-<li><b>Command-Line Authentication:</b> Register and login with username and password using a simple CLI interface.</li>
-<li><b>Object-Oriented Design:</b> Modular code with separate classes for user data, business logic, and application interface.</li>
-<li><b>In-Memory Storage:</b> Uses HashMap for efficient user management (no persistent storage).</li>
-<li><b>Error Handling:</b> Duplicate username validation and basic input validation.</li>
-<li><b>Easy to Run:</b> Compile and run with any Java 8+ environment.</li>
+<li><b>Developed a command-line authentication system</b> in Java with user registration and login functionality using object-oriented programming principles.</li>
+<li><b>Implemented in-memory data management</b> using HashMap for efficient user storage and retrieval with duplicate username validation.</li>
+<li><b>Created modular architecture</b> with separate classes for User data model, UserManager business logic, and Main application interface.</li>
+<li><b>Built interactive CLI interface</b> using Scanner class for user input handling and menu-driven navigation with error handling.</li>
+<li><b>Applied software development best practices</b> including proper code documentation, .gitignore configuration, and version control with Git.</li>
 <li><b>Open Source:</b> <a href='https://github.com/Abhiboss07/LoginSystem' target='_blank'>View on GitHub</a></li>
 </ul>`
     },
     {
-        title: 'Personal Portfolio Website',
-        description: 'A modern, responsive portfolio website to showcase my projects, skills, and experience.',
-        image: 'images/photo.jpg',
-        tags: ['web', 'html', 'css', 'javascript', 'portfolio'],
+        title: 'Market Price Prediction (AgriPrice Pro)',
+        description: 'Developed AgriPrice Pro, a full-stack agricultural price prediction platform using Java 17, Spring Boot, MongoDB, and RESTful APIs for real-time forecasts and data analysis.',
+        image: 'images/AgriPrice Pro.png',
+        tags: ['java', 'spring-boot', 'mongodb', 'rest-apis', 'docker', 'chart.js', 'ci-cd'],
         type: 'web',
-        repo: 'https://github.com/Abhiboss07/Portfolio',
+        repo: 'https://github.com/Abhiboss07/AgriPricePro',
         details: `<ul>
-<li><b>Designed and developed a personal portfolio website</b> using HTML5, CSS3, and JavaScript to highlight my work and skills.</li>
-<li><b>Implemented responsive design</b> for seamless viewing across devices and screen sizes.</li>
-<li><b>Showcased major projects</b> with interactive cards and modal popups for detailed views.</li>
-<li><b>Integrated downloadable resume</b> and contact form for professional outreach.</li>
-<li><b>Optimized for performance and accessibility</b> to ensure a fast and user-friendly experience.</li>
-<li><b>Live Demo:</b> <a href='https://portfolio-abhishek-01.vercel.app/' target='_blank'>portfolio-abhishek-01.vercel.app</a></li>
+<li><b>Developed AgriPrice Pro</b>, a full-stack agricultural price prediction platform using Java 17, Spring Boot, MongoDB, and RESTful APIs for real-time forecasts and data analysis.</li>
+<li><b>Built responsive dashboards</b> with JavaScript and Chart.js, containerized with Docker, and integrated CI pipelines, Swagger docs, and automated testing for scalable, production-ready deployment.</li>
+<li><b>Implemented machine learning models</b> for accurate price predictions and trend analysis in agricultural markets.</li>
+<li><b>Designed RESTful API endpoints</b> for seamless data integration and third-party service connectivity.</li>
+<li><b>Open Source:</b> <a href='https://github.com/Abhiboss07/AgriPricePro' target='_blank'>View on GitHub</a></li>
 </ul>`
     }
 ];
@@ -211,7 +210,7 @@ if (contactForm) {
         }
         
         // Create mailto link with form data
-        const mailtoLink = `mailto:abhicps19@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\n\nMessage:\n${message}`)}`;
+        const mailtoLink = `mailto:soft.vibe@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\n\nMessage:\n${message}`)}`;
         
         // Open default email client
         window.location.href = mailtoLink;

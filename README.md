@@ -51,7 +51,7 @@ My Portfolio/
 
 ## 📬 Contact
 Want to connect or collaborate?
-- Email: abhicps19@gmail.com
+- Email: soft.vibe@outlook.com
 - [LinkedIn](https://www.linkedin.com/in/abhishek-yadav-4738032b7/)
 - [GitHub](https://github.com/Abhiboss07)
 
