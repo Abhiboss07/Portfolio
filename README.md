@@ -1,59 +1,74 @@
-# Abhishek Yadav - Portfolio
+# Abhishek Yadav — Portfolio
 
-Welcome to my personal portfolio website! This project showcases my skills, projects, and experience as a Java and web developer.
+An Awwwards-tier personal portfolio for **Abhishek Yadav**, backend engineer.
+Dark, technical aesthetic with a "distributed systems, rendered" concept — a live
+WebGL node/edge network hero, scroll-driven storytelling, and bespoke per-project
+motion motifs.
 
-## 🚀 Overview
-This is a modern, responsive portfolio website built with HTML, CSS, and JavaScript. It highlights my technical skills, major projects, education, and provides a way to contact me directly.
+## Stack
 
-## ✨ Features
-- Professional landing page with profile and introduction
-- Projects section with detailed cards and modal popups
-- Resume section with downloadable PDF
-- Blog section for sharing insights and updates
-- Contact form that redirects to Gmail with pre-filled message
-- Fully responsive and mobile-friendly design
+- **Vite + React + TypeScript**
+- **Tailwind CSS v4** — utility styling & design tokens
+- **Framer Motion** — component animation, reveals, page-level motion config
+- **GSAP + ScrollTrigger** — scroll-scrubbed timelines, pinning, line reveals
+- **Lenis** — smooth scroll (bridged into GSAP's ticker)
+- **React Three Fiber + three** — the WebGL network hero (lazy-loaded, desktop only)
+- **lucide-react** — icons
+- Self-hosted **Space Grotesk** (display) + **JetBrains Mono** (mono) via `@fontsource`
 
-## 🛠 Projects Showcased
-- **NativeCode - Hindi Code Playground**  
-  A toy programming language with Hindi syntax, transpiling to Python, featuring an interactive web playground.  
-  [GitHub Repo](https://github.com/Abhiboss07/NativeCode) | [Live Demo](https://native-code.vercel.app/)
+## Run it
 
-- **Java Login System Project Summary**  
-  A simple command-line login system in Java with user registration, login, and in-memory data management.  
-  [GitHub Repo](https://github.com/Abhiboss07/LoginSystem)
-
-- **Personal Portfolio Website**  
-  This website! Designed and developed to showcase my work, skills, and provide a professional online presence.
-
-## 🧰 Technologies Used
-- HTML5, CSS3, JavaScript (Vanilla)
-- Font Awesome for icons
-- GSAP for animations
-
-## 📁 Folder Structure
-```
-My Portfolio/
-├── Abhishek Yadav.pdf         # Downloadable resume
-├── images/                    # Project and profile images
-│   ├── photo.jpg
-│   ├── nativecode-logo.png
-│   └── Java-LoginSystem.png
-├── index.html                 # Main HTML file
-├── script.js                  # JavaScript for interactivity
-├── styles.css                 # Custom styles
-└── README.md                  # Project documentation
+```bash
+npm install
+npm run dev      # http://localhost:5173
 ```
 
-## 🏁 Getting Started
-1. Clone this repository or download the ZIP.
-2. Open `index.html` in your browser to view the portfolio.
-3. To customize, edit the content in `index.html`, `script.js`, and `styles.css` as needed.
+Other scripts:
 
-## 📬 Contact
-Want to connect or collaborate?
-- Email: soft.vibe@outlook.com
-- [LinkedIn](https://www.linkedin.com/in/abhishek-yadav-4738032b7/)
-- [GitHub](https://github.com/Abhiboss07)
+```bash
+npm run build    # type-check + production build to dist/
+npm run preview  # serve the production build
+```
 
-## 📝 License
-This project is open source and available under the [MIT License](LICENSE). 
+## Design system
+
+| Token | Hex | Use |
+|-------|-----|-----|
+| bg | `#08090C` | page background |
+| surface | `#111318` | cards |
+| text | `#E8EAED` | headings / body |
+| muted | `#7C8291` | secondary text |
+| border | `#20242E` | hairlines |
+| **accent** | `#2DD4FF` | single accent, used consistently |
+
+## Sections
+
+Preloader (terminal boot, skippable) → Hero (WebGL network + kinetic type, custom
+magnetic cursor) → Tech marquee → About (line reveals + photo parallax/tilt) →
+Experience (scroll timeline + animated stat counters) → Projects (5 pinned cards,
+each with a bespoke motif) → Skills (grouped grid) → Certifications (horizontal
+scroll cards) → Contact/Footer (magnetic socials, live IST clock).
+
+## Accessibility & performance
+
+- Full `prefers-reduced-motion` support: Framer via `<MotionConfig reducedMotion="user">`,
+  GSAP/Lenis/3D/counters gated on the media query, plus a global CSS safety net. The 3D
+  hero is never mounted for reduced-motion or coarse-pointer (mobile) users — they get a
+  lightweight animated SVG network instead.
+- The Three.js bundle is code-split into its own lazy chunk and only loads on capable
+  desktops, keeping the mobile payload light.
+- Images are optimized (WebP + fallback) and lazy-loaded.
+
+## Assets
+
+- `public/images/my_photo.*` — profile photo (WebP + PNG)
+- `public/Abhishek_Yadav_Resume.pdf` — downloadable résumé
+- `public/favicon.svg`, `public/og-image.png` — favicon + social share card
+
+## Remaining TODOs (optional polish)
+
+- [ ] **Distributed Key-Value Store** and **Voice AI Platform** point to the GitHub
+      profile (`Abhiboss07`) — swap in the exact repo URLs once public.
+- [ ] Optionally replace the per-project motifs with real screenshots/GIFs of each
+      project if you want literal previews instead of the abstract visualizations.
+- [ ] Set the production domain in `index.html` `og:url` (currently a placeholder).
