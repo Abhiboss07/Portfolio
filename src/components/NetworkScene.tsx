@@ -112,7 +112,7 @@ function Network({ pointer }: { pointer: React.RefObject<{ x: number; y: number 
     <group ref={group}>
       <points ref={pointsRef} geometry={pointGeo}>
         <pointsMaterial
-          size={0.45}
+          size={0.5}
           map={sprite}
           transparent
           depthWrite={false}
@@ -125,7 +125,7 @@ function Network({ pointer }: { pointer: React.RefObject<{ x: number; y: number 
         <lineBasicMaterial
           color={ACCENT}
           transparent
-          opacity={0.22}
+          opacity={0.3}
           blending={THREE.AdditiveBlending}
           depthWrite={false}
         />
