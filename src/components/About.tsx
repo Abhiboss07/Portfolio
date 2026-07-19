@@ -8,7 +8,7 @@ const ABOUT_TEXT =
   'Software developer with hands-on experience in backend systems and data engineering — Java, Python, REST APIs and automation. I build data pipelines, web-scraping systems and scalable backend services, with a growing foundation in DSA and system design — shipping clean, reliable software in production, not just on a §whiteboard.';
 
 const FACTS = [
-  { k: 'Focus', v: 'Backend & data engineering' },
+  { k: 'Focus', v: 'Software Engineer' },
   { k: 'Stack', v: 'Java · Python · REST · Spring' },
   { k: 'Currently', v: 'SDE 1 @ AnantaSutra' },
 ];
