@@ -92,7 +92,7 @@ export default function Hero() {
           className="mb-6 flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-muted"
         >
           <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-accent" />
-          Available for backend roles · {profile.location}
+          Available for software roles · {profile.location}
         </motion.div>
 
         <h1 className="font-display text-[13vw] font-bold leading-[0.92] tracking-tight sm:text-[11vw] md:text-[8.5vw] lg:text-[6.25rem]">
@@ -103,7 +103,7 @@ export default function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 0.9, ease, delay: 0.15 }}
             >
-              Backend
+              Software
             </motion.span>
           </span>
           <span className="block overflow-hidden">
@@ -113,7 +113,7 @@ export default function Hero() {
               animate={{ y: 0 }}
               transition={{ duration: 0.9, ease, delay: 0.28 }}
             >
-              Engineer
+              Developer
             </motion.span>
           </span>
         </h1>
@@ -124,8 +124,8 @@ export default function Hero() {
           transition={{ duration: 0.8, ease, delay: 0.5 }}
           className="mt-8 max-w-xl text-balance font-mono text-base text-muted md:text-lg"
         >
-          Building systems that scale — distributed systems, microservices, data
-          pipelines and cloud-native architectures in production.
+          Building systems that scale — backend services, REST APIs, data
+          pipelines and automation, engineered for production.
         </motion.p>
 
         <motion.div
