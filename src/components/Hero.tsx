@@ -56,12 +56,23 @@ function StaticNetwork() {
 export default function Hero() {
   const reduced = useReducedMotion();
   const [use3D, setUse3D] = useState(false);
+  const [showMonitor, setShowMonitor] = useState(false);
   const magRef = useMagnetic<HTMLAnchorElement>(0.4);
 
   useEffect(() => {
     // Only mount WebGL on capable, motion-friendly, fine-pointer devices.
     if (!reduced && !isCoarsePointer()) setUse3D(true);
   }, [reduced]);
+
+  useEffect(() => {
+    // Only mount the (interval-driven) monitor on lg+ screens, so it never
+    // runs or loads its chunk on mobile/tablet.
+    const mq = window.matchMedia('(min-width: 1024px)');
+    const update = () => setShowMonitor(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
 
   return (
     <section
@@ -176,12 +187,14 @@ export default function Hero() {
         </motion.div>
         </div>
 
-        {/* Right column — live system monitor */}
-        <div className="hidden justify-end lg:flex">
-          <Suspense fallback={null}>
-            <SystemMonitor />
-          </Suspense>
-        </div>
+        {/* Right column — live system monitor (mounted on lg+ only) */}
+        {showMonitor && (
+          <div className="hidden justify-end lg:flex">
+            <Suspense fallback={null}>
+              <SystemMonitor />
+            </Suspense>
+          </div>
+        )}
       </div>
 
       {/* Scroll cue */}

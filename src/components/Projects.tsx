@@ -11,22 +11,22 @@ function ProjectCard({ project, i }: { project: (typeof projects)[number]; i: nu
   const ref = useRef<HTMLDivElement>(null);
 
   return (
-    <div className="sticky top-0 flex min-h-[100svh] items-center justify-center px-6 py-20 md:px-12 lg:px-20">
+    <div className="relative flex justify-center px-5 py-6 sm:px-6 md:px-12 md:py-8 lg:sticky lg:top-0 lg:min-h-[100svh] lg:items-center lg:py-20 lg:px-20">
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 60, scale: 0.97 }}
+        initial={{ opacity: 0, y: 40, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: false, amount: 0.4 }}
-        transition={{ duration: 0.8, ease }}
-        style={{ top: `${i * 12}px` }}
-        className="group relative w-full max-w-6xl overflow-hidden rounded-3xl border border-border bg-surface/70 backdrop-blur-sm"
+        viewport={{ once: true, amount: 0.25 }}
+        transition={{ duration: 0.7, ease }}
+        style={{ ['--peek' as string]: `${i * 12}px` }}
+        className="group relative w-full max-w-6xl overflow-hidden rounded-2xl border border-border bg-surface/70 backdrop-blur-sm sm:rounded-3xl lg:top-[var(--peek)]"
       >
         {/* accent top hairline */}
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/60 to-transparent" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* text side */}
-          <div className="flex flex-col justify-between p-8 md:p-12">
+          <div className="flex flex-col justify-between p-6 sm:p-8 md:p-12">
             <div>
               <div className="mb-6 flex items-center justify-between">
                 <span className="font-mono text-5xl font-bold text-border transition-colors group-hover:text-accent/30 md:text-6xl">
