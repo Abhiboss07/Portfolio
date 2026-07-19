@@ -1,14 +1,14 @@
 export const profile = {
   name: 'Abhishek Yadav',
-  role: 'Backend Engineer',
-  tagline: 'Backend Engineer building systems that scale',
+  role: 'Software Developer',
+  tagline: 'Software Developer building systems that scale',
   summary:
-    'Backend engineer with hands-on experience in data pipelines, microservices, and full-stack development using Java, Python, FastAPI, and Spring Boot. Focused on scalable cloud-native architectures, API design, automation, and data quality in production.',
+    'Software developer with hands-on experience across full-stack development, microservices and data pipelines using Java, Python, FastAPI, Spring Boot and React. Focused on scalable cloud-native systems, clean API design, automation and data quality in production.',
   email: 'abhicps19@gmail.com',
   github: 'https://github.com/Abhiboss07',
   githubHandle: 'Abhiboss07',
   linkedin: 'https://www.linkedin.com/in/abhishek-yadav-4738032b7/',
-  location: 'Machhlishahr, India',
+  location: 'Jaunpur, India',
   timezone: 'Asia/Kolkata',
   resume: '/Abhishek_Yadav_Resume.pdf',
   photo: '/images/my_photo.png',

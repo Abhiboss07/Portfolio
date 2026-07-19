@@ -5,7 +5,7 @@ import SectionHeading from './SectionHeading';
 import { isCoarsePointer } from '../hooks/useReducedMotion';
 
 const ABOUT_TEXT =
-  'Backend engineer with hands-on experience across data pipelines, microservices and full-stack development — Java, Python, FastAPI, Spring Boot. I care about scalable cloud-native systems, clean API design, automation and data quality in production — not just on a §whiteboard.';
+  'Software developer with hands-on experience across full-stack development, microservices and data pipelines — Java, Python, FastAPI, Spring Boot and React. I care about scalable cloud-native systems, clean API design, automation and data quality in production — not just on a §whiteboard.';
 
 const FACTS = [
   { k: 'Focus', v: 'Distributed systems & APIs' },

@@ -1,6 +1,6 @@
 # Abhishek Yadav — Portfolio
 
-An Awwwards-tier personal portfolio for **Abhishek Yadav**, backend engineer.
+An Awwwards-tier personal portfolio for **Abhishek Yadav**, software developer.
 Dark, technical aesthetic with a "distributed systems, rendered" concept — a live
 WebGL node/edge network hero, scroll-driven storytelling, and bespoke per-project
 motion motifs.
