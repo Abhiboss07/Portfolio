@@ -124,8 +124,8 @@ export default function Hero() {
           transition={{ duration: 0.8, ease, delay: 0.5 }}
           className="mt-8 max-w-xl text-balance font-mono text-base text-muted md:text-lg"
         >
-          Building systems that scale — full-stack development, microservices,
-          data pipelines and cloud-native architectures in production.
+          Building systems that scale — backend services, REST APIs, data
+          pipelines and automation, engineered for production.
         </motion.p>
 
         <motion.div

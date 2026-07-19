@@ -5,12 +5,12 @@ import SectionHeading from './SectionHeading';
 import { isCoarsePointer } from '../hooks/useReducedMotion';
 
 const ABOUT_TEXT =
-  'Software developer with hands-on experience across full-stack development, microservices and data pipelines — Java, Python, FastAPI, Spring Boot and React. I care about scalable cloud-native systems, clean API design, automation and data quality in production — not just on a §whiteboard.';
+  'Software developer with hands-on experience in backend systems and data engineering — Java, Python, REST APIs and automation. I build data pipelines, web-scraping systems and scalable backend services, with a growing foundation in DSA and system design — shipping clean, reliable software in production, not just on a §whiteboard.';
 
 const FACTS = [
-  { k: 'Focus', v: 'Distributed systems & APIs' },
-  { k: 'Stack', v: 'Java · Python · FastAPI · Spring' },
-  { k: 'Currently', v: 'SDE @ Anantasutra' },
+  { k: 'Focus', v: 'Backend & data engineering' },
+  { k: 'Stack', v: 'Java · Python · REST · Spring' },
+  { k: 'Currently', v: 'SDE 1 @ AnantaSutra' },
 ];
 
 export default function About() {

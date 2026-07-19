@@ -51,8 +51,13 @@ export default function Experience() {
                 className="rounded-2xl border border-border bg-surface/40 p-6 md:p-8"
               >
                 <h3 className="font-display text-xl font-semibold md:text-2xl">{job.role}</h3>
-                <div className="mt-1 flex items-center gap-2 font-mono text-sm text-accent">
+                <div className="mt-1 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-sm text-accent">
                   {job.company}
+                  {(job.type || job.location) && (
+                    <span className="text-muted">
+                      · {[job.type, job.location].filter(Boolean).join(' · ')}
+                    </span>
+                  )}
                 </div>
 
                 <ul className="mt-5 space-y-3">
@@ -71,18 +76,20 @@ export default function Experience() {
                   ))}
                 </ul>
 
-                <div className="mt-6 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
-                  {job.stats.map((s, si) => (
-                    <div key={si} className="bg-bg p-4 text-center">
-                      <div className="font-display text-2xl font-bold text-accent md:text-3xl">
-                        <Counter value={s.value} suffix={s.suffix} prefix={s.prefix} />
+                {job.stats && job.stats.length > 0 && (
+                  <div className="mt-6 grid grid-cols-3 gap-px overflow-hidden rounded-xl border border-border bg-border">
+                    {job.stats.map((s, si) => (
+                      <div key={si} className="bg-bg p-4 text-center">
+                        <div className="font-display text-2xl font-bold text-accent md:text-3xl">
+                          <Counter value={s.value} suffix={s.suffix} prefix={s.prefix} />
+                        </div>
+                        <div className="mt-1 font-mono text-[10px] uppercase leading-tight tracking-wider text-muted">
+                          {s.label}
+                        </div>
                       </div>
-                      <div className="mt-1 font-mono text-[10px] uppercase leading-tight tracking-wider text-muted">
-                        {s.label}
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                )}
               </motion.div>
             </div>
           ))}

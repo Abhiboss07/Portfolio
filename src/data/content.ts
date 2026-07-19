@@ -38,18 +38,35 @@ export type Experience = {
   role: string;
   company: string;
   period: string;
+  location?: string;
+  type?: string;
   bullets: string[];
-  stats: { value: number; suffix: string; prefix: string; label: string }[];
+  stats?: { value: number; suffix: string; prefix: string; label: string }[];
 };
 
 export const experience: Experience[] = [
   {
-    role: 'Software Development Engineer (SDE)',
-    company: 'Anantasutra',
+    role: 'Software Development Engineer 1',
+    company: 'AnantaSutra',
     period: 'May 2026 — Present',
+    location: 'Remote',
+    type: 'Full-time',
     bullets: [
-      'Built scalable Python web-scraping & lead-generation pipelines (BeautifulSoup, Requests, REST APIs, microservices) with automated verification & deduplication.',
-      'Engineered GitHub Actions CI/CD with automated testing, improving system reliability, maintainability and scalability.',
+      'Building and maintaining scalable backend services and technical projects in a fast-paced startup environment.',
+      'Developing data pipelines, web-scraping systems and automation workflows to professional coding and confidentiality standards.',
+      'Engineered GitHub Actions CI/CD with automated testing to improve system reliability and scalability.',
+    ],
+  },
+  {
+    role: 'Data Engineer',
+    company: 'AnantaSutra',
+    period: 'Nov 2025 — Jan 2026',
+    location: 'Remote',
+    type: 'Full-time',
+    bullets: [
+      "Built and deployed robust lead-generation tools central to Anantasutra's business intelligence and growth.",
+      'Constructed data pipelines with Python (BeautifulSoup, Requests, REST APIs) plus automated verification and deduplication.',
+      'Owned database management and data integrity across the pipeline.',
     ],
     stats: [
       { value: 40, suffix: '%', prefix: '+', label: 'Data acquisition' },
@@ -58,17 +75,25 @@ export const experience: Experience[] = [
     ],
   },
   {
-    role: 'Data Engineer Intern',
-    company: 'Anantasutra',
-    period: 'Nov 2025 — Jan 2026',
+    role: 'Java Developer',
+    company: 'Cognifyz Technologies',
+    period: 'Aug 2025 — Sep 2025',
+    location: 'Remote',
+    type: 'Internship',
     bullets: [
-      'Automated lead-generation pipelines with Python (BeautifulSoup, Requests) and RESTful API integrations, plus verification & deduplication.',
-      'Built microservices-based automation with GitHub Actions CI/CD and unit testing, reducing invalid records.',
+      'Developed 9 real-world Java applications (console + GUI) applying OOP, exception handling and input validation.',
+      'Built Java Swing tools and integrated live APIs with HttpClient; kept code clean, modular and version-controlled on GitHub.',
     ],
-    stats: [
-      { value: 40, suffix: '%', prefix: '+', label: 'Data acquisition' },
-      { value: 35, suffix: '%', prefix: '+', label: 'Data quality' },
-      { value: 30, suffix: '%', prefix: '-', label: 'Fewer invalid records' },
+  },
+  {
+    role: 'Java Programmer',
+    company: 'CodSoft',
+    period: 'Jul 2025 — Aug 2025',
+    location: 'Remote',
+    type: 'Internship',
+    bullets: [
+      'Delivered 5 real-world Java projects spanning console and GUI applications.',
+      'Strengthened core Java, OOP and GUI development with clean, maintainable, version-controlled code.',
     ],
   },
 ];
@@ -91,7 +116,7 @@ export const projects: Project[] = [
     subtitle: 'In-memory data store · Java 17',
     description:
       'Production-grade in-memory KV store from scratch: TCP server on a FixedThreadPool (50 concurrent clients), O(1) LRU eviction via LinkedHashMap, and dual-strategy TTL expiry (lazy + ScheduledExecutorService sweep).',
-    tech: ['Java 17', 'TCP', 'LRU / LinkedHashMap', 'AOF + fsync', 'JUnit 5', 'CLI'],
+    tech: ['Java 17', 'TCP', 'ConcurrentHashMap', 'LRU / LinkedHashMap', 'AOF + fsync', 'JUnit 5'],
     github: 'https://github.com/Abhiboss07',
     motif: 'kv',
     accentNote:
@@ -166,13 +191,13 @@ export const certifications = [
     issuer: 'Forage',
     date: 'July 2025',
   },
-  { title: 'Java Programming', issuer: 'CodSoft', date: 'Certificate' },
+  { title: 'Java Programming', issuer: 'CodSoft', date: 'Aug 2025' },
+  { title: 'Java Development', issuer: 'Cognifyz Technologies', date: 'Sep 2025' },
   { title: 'Bharat Innovation Conclave', issuer: 'Participation', date: 'Certificate' },
-  { title: 'Java Development', issuer: 'Cognifyz Technologies', date: 'Certificate' },
 ];
 
 export const education = {
-  degree: 'B.Tech, Computer Science & Engineering',
-  school: 'Veer Bahadur Singh Purvanchal University',
+  degree: 'B.Tech, Computer Science',
+  school: 'Veer Bahadur Singh Purvanchal University (VBSPU), Jaunpur',
   period: '2023 — 2027 (Expected)',
 };
