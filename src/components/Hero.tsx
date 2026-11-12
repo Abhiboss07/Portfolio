@@ -7,7 +7,6 @@ import { useMagnetic } from '../hooks/useMagnetic';
 import { scrollTo } from '../lib/smoothScroll';
 
 const NetworkScene = lazy(() => import('./NetworkScene'));
-const SystemMonitor = lazy(() => import('./SystemMonitor'));
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -56,23 +55,12 @@ function StaticNetwork() {
 export default function Hero() {
   const reduced = useReducedMotion();
   const [use3D, setUse3D] = useState(false);
-  const [showMonitor, setShowMonitor] = useState(false);
   const magRef = useMagnetic<HTMLAnchorElement>(0.4);
 
   useEffect(() => {
     // Only mount WebGL on capable, motion-friendly, fine-pointer devices.
     if (!reduced && !isCoarsePointer()) setUse3D(true);
   }, [reduced]);
-
-  useEffect(() => {
-    // Only mount the (interval-driven) monitor on lg+ screens, so it never
-    // runs or loads its chunk on mobile/tablet.
-    const mq = window.matchMedia('(min-width: 1024px)');
-    const update = () => setShowMonitor(mq.matches);
-    update();
-    mq.addEventListener('change', update);
-    return () => mq.removeEventListener('change', update);
-  }, []);
 
   return (
     <section
@@ -88,14 +76,12 @@ export default function Hero() {
         ) : (
           <StaticNetwork />
         )}
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_72%_48%,transparent_52%,#08090c_100%)]" />
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-2/5 bg-gradient-to-r from-bg via-bg/60 to-transparent" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_60%_45%,transparent_60%,#08090c_100%)]" />
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-bg via-bg/70 to-transparent" />
         <div className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-bg to-transparent" />
       </div>
 
-      <div className="relative mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10">
-        {/* Left column — headline & CTAs */}
-        <div>
+      <div className="relative mx-auto w-full max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -106,7 +92,7 @@ export default function Hero() {
           Available for software roles · {profile.location}
         </motion.div>
 
-        <h1 className="font-display text-[13vw] font-bold leading-[0.92] tracking-tight sm:text-[11vw] md:text-[8.5vw] lg:text-[6.25rem]">
+        <h1 className="font-display text-[13vw] font-bold leading-[0.92] tracking-tight sm:text-[11vw] md:text-[8.5vw] lg:text-[7.5rem] xl:text-[8.5rem]">
           <span className="block overflow-hidden">
             <motion.span
               className="block"
@@ -185,16 +171,6 @@ export default function Hero() {
             </a>
           </div>
         </motion.div>
-        </div>
-
-        {/* Right column — live system monitor (mounted on lg+ only) */}
-        {showMonitor && (
-          <div className="hidden justify-end lg:flex">
-            <Suspense fallback={null}>
-              <SystemMonitor />
-            </Suspense>
-          </div>
-        )}
       </div>
 
       {/* Scroll cue */}
